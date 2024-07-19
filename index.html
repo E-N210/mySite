@@ -912,82 +912,84 @@
       }
 
 
+function update(){
+  {
+    yposMob = getElementYPosition(backgroundDivisorMobile)
+     if(yposMob<450){console.log(yposMob)
+       var darkAmount= map(yposMob,0,-350,0,1)
+       backgroundDivisorMobile.style.backgroundColor = 'rgba(30,45,54,'+darkAmount+')';
+     }
 
-    setInterval(function(){
-      yposMob = getElementYPosition(backgroundDivisorMobile)
-       if(yposMob<450){console.log(yposMob)
-         var darkAmount= map(yposMob,0,-350,0,1)
-         backgroundDivisorMobile.style.backgroundColor = 'rgba(30,45,54,'+darkAmount+')';
-       }
-
-      if(page==0){yPos = getElementYPosition(aboutPage)
-                  yposOb2 = getElementYPosition(backgroundDivisorAbout)
-
-
-
-                if(yPos>200 || yposOb2<60){
-
-                  if(checkColorChange==true){
-                    $("#menu").removeClass("hovered")
-                    $("#aboutEvidence").removeClass("hovered")
-                    $("#mainPage").removeClass("hovered")
+    if(page==0){yPos = getElementYPosition(aboutPage)
+                yposOb2 = getElementYPosition(backgroundDivisorAbout)
 
 
 
-                    $("#menu").addClass("noMoreHovered")
-                    $("#aboutEvidence").addClass("noMoreHovered")
-                    $("#mainPage").addClass("noMoreHovered")}
+              if(yPos>200 || yposOb2<60){
 
-                }
-
-                else {
-                  checkColorChange =true
-                  if(checkColorChange==true){
-                  $("#menu").addClass("hovered")
-                  $("#aboutEvidence").addClass("hovered")
-                  $("#mainPage").addClass("hovered")
-
-                  $("#menu").removeClass("noMoreHovered")
-                  $("#aboutEvidence").removeClass("noMoreHovered")
-                  $("#mainPage").removeClass("noMoreHovered")}
-                }
-
-      }
-
-      else{yPos = getElementYPosition(projectPage)
-           yposOb2 = getElementYPosition(backgroundDivisorProject)
+                if(checkColorChange==true){
+                  $("#menu").removeClass("hovered")
+                  $("#aboutEvidence").removeClass("hovered")
+                  $("#mainPage").removeClass("hovered")
 
 
-                if(yPos>200 || yposOb2<80){
 
-                  if(checkColorChange==true){
-                    $("#menu").removeClass("hovered")
-                    $("#projectEvidence").removeClass("hovered")
-                    $("#mainPage").removeClass("hovered")
+                  $("#menu").addClass("noMoreHovered")
+                  $("#aboutEvidence").addClass("noMoreHovered")
+                  $("#mainPage").addClass("noMoreHovered")}
 
-                    $("#menu").addClass("noMoreHovered")
-                    $("#projectEvidence").addClass("noMoreHovered")
-                    $("#mainPage").addClass("noMoreHovered")}
-
-                }
-                else {
-                  checkColorChange =true
-                  if(checkColorChange==true){
-                  $("#menu").addClass("hovered")
-                  $("#projectEvidence").addClass("hovered")
-                  $("#mainPage").addClass("hovered")
-
-                  $("#menu").removeClass("noMoreHovered")
-                  $("#projectEvidence").removeClass("noMoreHovered")
-                  $("#mainPage").removeClass("noMoreHovered")}
-                }
               }
-    //  console.log(yPos)
 
-  //    console.log(yposOb2)
+              else {
+                checkColorChange =true
+                if(checkColorChange==true){
+                $("#menu").addClass("hovered")
+                $("#aboutEvidence").addClass("hovered")
+                $("#mainPage").addClass("hovered")
+
+                $("#menu").removeClass("noMoreHovered")
+                $("#aboutEvidence").removeClass("noMoreHovered")
+                $("#mainPage").removeClass("noMoreHovered")}
+              }
+
+    }
+
+    else{yPos = getElementYPosition(projectPage)
+         yposOb2 = getElementYPosition(backgroundDivisorProject)
 
 
-    }, 100)
+              if(yPos>200 || yposOb2<80){
+
+                if(checkColorChange==true){
+                  $("#menu").removeClass("hovered")
+                  $("#projectEvidence").removeClass("hovered")
+                  $("#mainPage").removeClass("hovered")
+
+                  $("#menu").addClass("noMoreHovered")
+                  $("#projectEvidence").addClass("noMoreHovered")
+                  $("#mainPage").addClass("noMoreHovered")}
+
+              }
+              else {
+                checkColorChange =true
+                if(checkColorChange==true){
+                $("#menu").addClass("hovered")
+                $("#projectEvidence").addClass("hovered")
+                $("#mainPage").addClass("hovered")
+
+                $("#menu").removeClass("noMoreHovered")
+                $("#projectEvidence").removeClass("noMoreHovered")
+                $("#mainPage").removeClass("noMoreHovered")}
+              }
+            }
+  //  console.log(yPos)
+
+//    console.log(yposOb2)
+
+
+  }
+}
+    setInterval(update, 100)
 
 
 
@@ -998,6 +1000,6 @@
 
 
     </script>
-  
+
   </body>
 </html>
