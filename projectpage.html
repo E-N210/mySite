@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./jquery-3.6.0.min.js"></script>
+  <script src="./mistretta_sfondi/p5.min.js"></script>
+    <script src="./mistretta_sfondi/addons/p5.sound.min.js"></script>
+  <script src="./mistretta_sfondi/background.js"></script>
+  <title>Ennio's fantastic website</title>
+</head>
+
+  <div id="ainimation_trigger"></div>
+
+  <img id="banner" class="img_banner" src="./imgs/avatar_body-transformed (1).jpeg"></img>
+
+
+  <div id="main_menu">
+  <a href="./index.html">
+    <div id= "aboutme">ABOUT ME</div>
+  </a>
+
+
+
+    <div id= "projects">PROJECTS</div>
+
+  </div>
+
+
+  <div id="main_content">
+
+  <!-- SKILLS LEVEL 1-->
+  <h1> MY PROJECTS </h1>
+  <h3> GRAPHIC PROJECTS </h3>
+    <div><h2> Project 1 </h2>
+      <div class="menuItem">prova</div>
+    </div>
+      <div><h2> Project 2</h2>
+
+    <div class="menuItem"></div>
+  </div>
+
+
+  <h3> DIGITAL PROJECTS </h3>
+    <div><h2>Project1</h2>
+      <div class="menuItem">
+      <div id="p5Container"></div></div>
+    </div>
+    <div><h2>Project2</h2>
+      <div class="menuItem">prova</div>
+    </div>
+
+
+  <h3> AUGMENTED REALITY </h3>
+    <div><h2>Project1</h2>
+      <div class="menuItem">prova</div>
+    </div>
+    <div><h2>Project2</h2>
+      <div class="menuItem">prova</div>
+    </div>
+  </div>
+
+
+
+
+
+      <footer>
+
+      </footer>
+
+
+  <script>
+
+  //var skill_showed = 0;
+  window.addEventListener('unload', function() {
+    // Reset the position of the element when the page is refreshed
+    document.body.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      document.documentElement.scrollTop = 0;
+    });
+
+  $(".menuItem").hide();
+
+  $("h2").on("click",function(e){
+
+    //console.log(skill_showed)
+      var object =   $(this).parent()
+      var skill_showed = object.data("skill_showed") || 0;
+
+        if(skill_showed==0){
+
+      skill_showed = 1;
+      object.children(".menuItem").removeClass("close").show().addClass("open");//  $("#theorical_skill_list").removeClass("close")
+      }
+
+    else{
+        skill_showed = 0;
+       object.children(".menuItem").removeClass("open").addClass("close");
+       setTimeout (function(){object.children(".menuItem").hide()}, 490)}
+
+       object.data("skill_showed", skill_showed);
+
+  })
+
+
+  var title = $("#maintitle")
+    title.mouseenter(function(e){
+    title.children(".menuItem").removeClass("close").show().addClass("open");
+    })
+
+    title.mouseleave(function(e){
+      title.children(".menuItem").removeClass("open").addClass("close");
+      setTimeout (function(){title.children(".menuItem").hide() }, 490)
+
+    })
+
+    var firstView=0
+    const observer2 = new IntersectionObserver(entries =>{
+
+      entries.forEach(entry=>{
+
+        const target = entry.target;
+        const object= document.querySelector('#main_content')
+        //console.log(target.id, entry.isIntersecting, firstLoad)
+
+        if(entry.isIntersecting){
+
+            object.classList.remove("enter")
+            if(firstView==1){object.classList.add("exit")}
+            $("#maintitle").removeClass("fadeout")
+            $("#maintitle").addClass("fadein")
+            firstView=1
+            console.log("projects is interecting")
+          }
+
+          else{
+                    object.classList.add("enter")
+                    object.classList.remove("exit")
+                    $("#maintitle").addClass("fadeout")
+                    $("#maintitle").removeClass("fadein")
+                    console.log("main is intersecting")}
+
+      })
+    })
+
+    observer2.observe(document.querySelector('#ainimation_trigger'))
+
+
+
+
+  //$("#header").mouseover(function(){$("#contacts").show(); console.log("header in")})
+  //$("#banner").mouseover(function(){$("#contacts").show(); console.log("header in")})
+
+  //$("#header").mouseout(function(){$("#contacts").hide(); console.log("header out")})
+  //$("#banner").mouseout(function(){$("#contacts").hide(); console.log("header out")})
+
+  </script>
+
+    </body>
+  </html>

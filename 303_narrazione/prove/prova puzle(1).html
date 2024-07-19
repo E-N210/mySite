@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<style>
+ #q{ postion:relative;
+     top:500px;
+     left:500px;
+     width:100px;
+    height:100px;
+     }
+     #q.red{
+       background-color: red
+     }
+
+     .blu{
+       background-color: blue
+     }
+
+</style>
+</head>
+<body>
+  <div id="q"></div>
+<script>
+function frecce(){
+  var e= event.detctKey
+if(e==40){$("#q").addClass("blu")}}
+
+
+$("#q").on("oneKeyDown", frecce())
+</script>
+</body>
+</html>

@@ -1,0 +1,900 @@
+canvas{
+border-radius:30px;}
+
+@font-face {
+font-family: "antique";
+src:url("./sprites/antiqueOliveStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+font-family: "antiqueb";
+src:url("./sprites/antiqueOliveStd-Compact.otf") format("opentype");
+
+}
+
+@font-face {
+font-family: "antiquebb";
+src:url("./sprites/antiqueOliveStd-Bold.otf") format("opentype");
+
+}
+
+#page{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:1000px;
+	height:700px;
+	background-color: white;
+	color:#d6bd58;
+  overflow: hidden;
+	border-radius:30px;
+	box-shadow: 10px 10px 15px 15px rgba(0,0,0,0.45);
+}
+
+#credits{
+	position:absolute;
+	top:0%;
+	left:50%;
+	font-family: "antique";
+	line-height: 25px;
+	font-weight: normal;
+  background-image:url("./sprites/extras.png");
+display: none;
+font-size: 20px;width:900px;
+	height:550px;
+	transform: translate(-450px,-410px);
+text-align: center;
+}
+#creditsita{
+	position:absolute;
+	top:0%;
+	left:50%;
+	font-family: "antique";
+	line-height: 25px;
+	font-weight: normal;
+  background-image:url("./sprites/extras.png");
+display: none;
+font-size: 20px;width:900px;
+	height:550px;
+	transform: translate(-450px,-410px);
+text-align: center;
+}
+#autors{
+	position:absolute;
+	top:0%;
+	left:50%;
+	transform: translate(-450px,-410px);
+  background-image:url("./sprites/extras.png");display: none;
+font-size: 25px;
+width:900;
+height:550;
+text-align: center;
+line-height: 25px;
+}
+
+#aldo{
+	position:absolute;
+	top:0%;
+	left:50%;
+	transform: translate(-450px,-410px);
+  background-image:url("./sprites/extras.png");display: none;
+font-size: 25px;
+width:900;
+height:550;
+text-align: center;
+line-height: 25px;
+}
+
+
+#pic:hover{
+	background-image:url("sprites/peppeSILVER.png");
+}
+#pic{position: absolute;
+top:20%;
+left:15%;
+width:150px;
+height:150px;
+background-image:url("sprites/peppe.png");}
+
+#pic1:hover{
+	background-image:url("sprites/teoSILVER.png");
+}
+#pic1{position: absolute;
+top:60%;
+left:30%;
+width:150px;
+height:150px;
+background-image:url("sprites/teo.png");}
+
+#pic2:hover{
+	background-image:url("sprites/meSILVER.png");
+}
+#pic2{position: absolute;
+top:60%;
+left:55%;
+width:150px;
+height:150px;
+background-image:url("sprites/me.png");}
+
+#pic3:hover{
+	background-image:url("sprites/daniSILVER.png");
+}
+#pic3{position: absolute;
+top:20%;
+left:70%;
+width:150px;
+height:150px;
+background-image:url("sprites/dani.png");}
+
+#pic4:hover{
+	background-image:url("sprites/peppeSILVER.png");
+}
+
+#pic4{position: absolute;
+top:20%;
+left:15%;
+width:150px;
+height:150px;
+background-image:url("sprites/peppe.png");}
+
+#pic5:hover{
+	background-image:url("sprites/teoSILVER.png");
+}
+
+#pic5{position: absolute;
+top:60%;
+left:30%;
+width:150px;
+height:150px;
+background-image:url("sprites/teo.png");}
+
+#pic6:hover{
+	background-image:url("sprites/meSILVER.png");
+}
+
+#pic6{position: absolute;
+top:60%;
+left:55%;
+width:150px;
+height:150px;
+background-image:url("sprites/me.png");}
+
+#pic7:hover{
+	background-image:url("sprites/daniSILVER.png");
+}
+
+#pic7{position: absolute;
+top:20%;
+left:70%;
+width:150px;
+height:150px;
+background-image:url("sprites/dani.png");}
+
+
+
+
+#title {
+	font-family: "antique";
+	line-height: 20px;
+	font-weight: normal;
+	text-align: center;
+	font-size: 18px;
+	position: absolute;
+	top:75%;
+	left:50%;
+	transform: translate(-50%,0px);
+	width:510px;
+	height:35px;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-bottom: 60px;
+	padding-top: 30px;;
+	z-index: 13;
+	color:color:#d6bd58;
+
+}
+
+#sfondo{position: absolute;
+	transform: translate(-300px, -300px);}
+
+#button {
+	position: absolute;
+	top: 87%;
+	left: 0%;
+	width: 100%;
+	color:#d6bd58;
+}
+
+
+#content{position: absolute;
+width:1000px;
+height:700px;
+z-index:-5;
+border-radius:30px;
+}
+.button-textdx{
+
+	position:absolute;
+	left:15%;
+	width: 130px;
+	color:white;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 15%;
+	transform: translate(70%,0px);
+	z-index: 14;
+
+	font-family: "antiqueb";
+	line-height: 14px;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+
+	text-align: center;
+	transition: color 0s
+	}
+
+	#right{display: none;}
+	#right:hover{color:#ebdd19}
+	#left:hover{color:#ebdd19}
+
+.button-textsx{
+
+	position:absolute;
+	left:75%;
+	transform: translate(-100%,0px);
+	width: 130px;
+	color:white;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 15%;
+  transition: color 0s;
+  z-index: 14;
+
+	font-family: "antiqueb";
+	line-height: 14px;
+
+	font-size: 14px;
+	letter-spacing: 0.5px;
+
+	text-align: center;
+}
+
+.button-textcntr{
+	position:absolute;
+	left:50%;
+	top:65%;
+	transform: translate(-95px,-85px);
+	width: 200px;
+	color:white;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 14%;
+
+	font-family: "antiqueb";
+	line-height: 14px;
+
+	font-size: 15px;
+	letter-spacing: 1px;
+
+	text-align: center;
+	vertical-align: middle;
+	transition: color 0s
+}
+
+
+
+
+.button-textdn0{
+	position:absolute;
+	left:50%;
+	top:85%;
+	transform: translate(355px,-575px);
+	background-image: url("./sprites/reload.png");
+	width: 80px;
+	height:80px;
+	padding: 10px;
+	cursor: pointer;
+
+	font-family: "antique";
+	line-height: 20px;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;}
+
+	.button-textdn:hover{		background-image: url("./sprites/sicSILVER.png");
+	}
+.button-textdn{
+	position:absolute;
+	left:50%;
+	top:85%;
+	transform: translate(-250px,-600px);
+	background-image: url("./sprites/sic.png");
+	width: 80px;
+	height:80px;
+	padding: 10px;
+	cursor: pointer;
+
+	font-family: "antique";
+	line-height: 20px;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;}
+
+	.button-textdn2:hover{		background-image: url("./sprites/mappaSILVERpulsante.png");
+}
+	.button-textdn2{
+		position:absolute;
+		left:50%;
+		top:85%;
+		transform: translate(-365px,-600px);
+		background-image: url("./sprites/mappaPulsante.png");
+		width: 80px;
+		height:80px;
+		padding: 10px;
+		cursor: pointer;
+
+		font-family: "antique";
+		line-height: 20px;
+		font-weight: normal;
+
+		text-align: center;}
+
+		.button-textdn1:hover{		background-image: url("./sprites/itaSILVER.png");
+		}
+	.button-textdn1{
+		position:absolute;
+		left:50%;
+		top:85%;
+		transform: translate(-250px,-600px);
+		background-image: url("./sprites/ita.png");
+		width: 80px;
+		height:80px;
+		padding: 10px;
+		cursor: pointer;
+		font-family: "antique";
+		line-height: 20px;
+		font-weight: normal;
+		font-size: 12px;
+		text-align: center;
+
+}
+
+.button-textdn3{
+	position:absolute;
+	left:50%;
+	top:85%;
+	transform: translate(-480px,-600px);
+	background-image: url("./sprites/faro.png");
+	width: 80px;
+	height:80px;
+	color: #000;
+	padding: 10px;
+	cursor: pointer;
+
+	font-family: "antique";
+	line-height: 20px;
+	font-weight: normal;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+
+}
+.button-textdn3:hover{background-image: url("./sprites/faroSILVER.png")}
+
+#extralink{
+	z-index: 1000;
+	position: absolute;
+	top: 10%;
+	left:50%;
+	transform: translate(-50%,0%);
+	font-size: 70px;
+	color: white
+}
+
+body{background-image: url("./sprites/sfondosabbia.png");
+overflow:visible;}
+.game{display: none;}
+.no{display: none;}
+#labirinto{
+	position: absolute;
+	top: 0%;
+	left:0%;
+	transform: translate(0%,0);
+}
+#meduse{
+	position: absolute;
+	left:0%;
+	top: 0%;
+	transform: translate(0%,0);
+}
+
+#labirinto{
+	position: absolute;
+	left:0%;
+	top: 0%;
+	transform: translate(0%,0);
+}
+
+#cunicolo{
+	position: absolute;
+	left:0px;
+	top: 0%;
+	transform: translate(0%,0);
+}
+
+#sfondo{position: absolute;
+top:520px;
+left:63px;
+width:1000px;
+z-index: -2;
+transform: translate(0px,-50px);}
+
+#extralink{width: 1000px;
+  height:700px;
+position: absolute;
+}
+
+
+#au:hover{	background-image: url("./sprites/timoneSILVER.png");
+}
+#au{width: 160px;
+	height:160px;
+	position: absolute;
+	top:250px;
+	left:575px;
+	transform: translate(-50%,0%);
+	background-image: url("./sprites/timoneCopertina.png");
+}
+
+#cr:hover{	background-image: url("./sprites/ancoraSILVER.png");
+}
+#cr{width: 160px;
+	height:160px;
+	position: absolute;
+	top:350px;
+	left:725px;
+	transform: translate(-50%,0%);
+	background-image: url("./sprites/ancora2.png");
+	z-index: 10000;
+}
+
+#mp:hover{		background-image: url("./sprites/mappaSILVERCopertina.png");
+}
+#mp{width: 160px;
+	height:160px;
+	position: absolute;
+	top:250px;
+	left:875px;
+	transform: translate(-50%,0%);
+	background-image: url("./sprites/mappaCopertina.png");
+}
+
+#st:hover{	background-image: url("./sprites/titoloSILVER.png");
+}
+#st{width: 480px;
+	height:256px;
+	position: absolute;
+	top:0px;
+	left:725px;
+	transform: translate(-50%,0%);
+	background-image: url("./sprites/Titolo.png");
+}
+
+#tin{display: none;
+transform: translate(0px,8px);}
+#tinita{display: none;}
+
+#t000{display: none;
+transform: translate(0px,8px)}
+#t000ita{display: none;
+transform: translate(0px,8px)}
+
+#t010{display: none;
+transform: translate(0px,8px)}
+#t010ita{display: none;
+transform: translate(0px,8px)}
+
+#t030{display: none;}
+#t030ita{display: none;}
+
+#t040{display: none;}
+#t040ita{display: none;}
+
+#t045{display: none;}
+#t045ita{display: none;}
+
+#t050{display: none;
+transform: translate(0px,8px)}
+#t050ita{display: none;
+transform: translate(0px,8px)}
+
+#t060{display: none;}
+#t060ita{display: none;}
+
+#t080{display: none;
+transform: translate(0px,8px)}
+#t080ita{display: none;
+transform: translate(0px,8px)}
+
+#t085{display: none;
+transform: translate(0px,8px)}
+#t085ita{display: none;
+transform: translate(0px,8px)}
+
+#t090{display: none;
+transform: translate(0px,8px)}
+#t090ita{display: none;
+transform: translate(0px,8px)}
+
+#t100{display: none;
+transform: translate(0px,8px)}
+#t100ita{display: none;
+transform: translate(0px,8px)}
+
+#t110{display: none;
+transform: translate(0px,8px)}
+#t110ita{display: none;
+transform: translate(0px,8px)}
+
+#t120{display: none;
+transform: translate(0px,8px)}
+#t120ita{display: none;
+transform: translate(0px,8px)}
+
+#t130{display: none;
+transform: translate(0px,8px)}
+#t130ita{display: none;
+transform: translate(0px,8px)}
+
+
+#maplink{
+width:600px;
+height:550px;
+font-family: "antiqueb";
+transform: translate(-50px,-980px);
+cursor: pointer;
+border-color: white;
+font-size: 12px;
+line-height: 17px;
+
+color:#b6bd58;
+overflow: hidden;}
+
+#sf{width:900px;
+	height:550px;
+	transform: translate(-200px,-450px);
+	overflow: hidden;
+background-image:url('./sprites/extras.png');}
+
+.maplin:hover{color:white;
+	background-image: url("./sprites/vuotoSILVER.png");
+}
+.maplin{
+	width: 120px;
+	height:120px;
+	transform: translate(0px,30px);
+  background-image: url("./sprites/vuoto.png");
+border-radius:50%}
+
+
+
+#pagint{position: absolute;
+top:150px;
+left:0px;
+
+}
+#pagint:hover{color:white}
+
+#pag000{position: absolute;
+top:300px;
+left:150px;}
+
+#pag010{position: absolute;
+top:150px;
+left:300px;
+background-image:url('./sprites/vuotoSILVER.png');
+
+}
+
+#pag010:hover{color:white;
+	background-image:url('./sprites/vuoto.png');
+}
+
+#pag030{position: absolute;
+top:300px;
+left:450px;}
+
+#pag040{position: absolute;
+top:300;
+left:900}
+
+#pag045{position: absolute;
+top:0px;
+left:450;}
+
+#pag050{position: absolute;
+top:0px;
+left:600;}
+
+
+#pag060{position: absolute;
+top:150px;
+left:750px;}
+
+#pag080{position: absolute;
+top:150px;
+left:900px;}
+
+#pag085{position: absolute;
+top:0px;
+left:1050px;
+background-image:url('./sprites/vuotoSILVER.png');
+}
+
+#pag085:hover{color:white;
+	background-image:url('./sprites/vuoto.png');
+
+}
+
+#pag090{position: absolute;
+top:0px;
+left:750px;
+background-image:url('./sprites/vuotoSILVER.png');
+}
+
+#pag090:hover{color:white;
+	background-image:url('./sprites/vuoto.png');
+}
+
+#pag100{position: absolute;
+top:300px;
+left:600px;}
+#pag100:hover{color:white}
+
+#pag110{position: absolute;
+top:300px;
+left:1050px;}
+
+#pag110:hover{color:white}
+#pag120{position: absolute;
+top:150px;
+left:1050px;}
+
+#pag120:hover{color:white}
+#pag130{position: absolute;
+top:0px;
+left:900;
+}
+#pag130:hover{color:white}
+
+#Imaplink{
+width:600px;
+height:550px;
+font-family: "antiqueb";
+transform: translate(-50px,-980px);
+cursor: pointer;
+border-color: white;
+font-size: 12px;
+line-height: 17px;
+
+color:#b6bd58;
+overflow: hidden;}
+
+#Isf{width:900px;
+	height:550px;
+	transform: translate(-200px,-450px);
+	overflow: hidden;
+background-image:url('./sprites/extras.png');}
+
+
+.maplin{
+	width: 120px;
+	height:120px;
+	transform: translate(0px,30px);
+  background-image: url("./sprites/vuoto.png");
+border-radius:50%}
+#Ipagint{position: absolute;
+top:150px;
+left:0px;
+
+}
+#Ipagint:hover{color:white}
+
+#Ipag000{position: absolute;
+top:300px;
+left:150px;}
+
+#Ipag010{position: absolute;
+top:150px;
+left:300px;
+background-image:url('./sprites/vuotoSILVER.png');
+
+}
+
+#Ipag010:hover{color:white;
+	background-image:url('./sprites/vuoto.png');
+}
+
+#Ipag030{position: absolute;
+top:300px;
+left:450px;}
+
+#Ipag040{position: absolute;
+top:300;
+left:900}
+
+#Ipag045{position: absolute;
+top:0px;
+left:450;}
+
+#Ipag050{position: absolute;
+top:0px;
+left:600;}
+
+
+#Ipag060{position: absolute;
+top:150px;
+left:750px;}
+
+#Ipag080{position: absolute;
+top:150px;
+left:900px;}
+
+#Ipag085{position: absolute;
+top:0px;
+left:1050px;
+background-image:url('./sprites/vuotoSILVER.png');
+}
+
+#Ipag085:hover{color:white;
+	background-image:url('./sprites/vuoto.png');
+
+}
+
+#Ipag090{position: absolute;
+top:0px;
+left:750px;
+background-image:url('./sprites/vuotoSILVER.png');
+}
+
+#Ipag090:hover{color:white;
+	background-image:url('./sprites/vuoto.png');
+}
+
+#Ipag100{position: absolute;
+top:300px;
+left:600px;}
+#Ipag100:hover{color:white}
+
+#Ipag110{position: absolute;
+top:300px;
+left:1050px;}
+
+#Ipag110:hover{color:white}
+#Ipag120{position: absolute;
+top:150px;
+left:1050px;}
+
+#Ipag120:hover{color:white}
+#Ipag130{position: absolute;
+top:0px;
+left:900;
+}
+#Ipag130:hover{color:white}
+
+.scr{position: absolute;
+
+top:70%;
+transform: translate(-5px,-20px);
+width:15px;
+height:15px;
+border-radius: 50%;
+background-color:#d6bd58;
+}
+
+.scrsec{position: absolute;
+top:70%;
+transform: translate(-5px,-20px);
+width:15px;
+height:15px;
+border-radius: 50%;
+background-color:white
+}
+
+#scr0{left:30%}
+#scr1{left:36%}
+#scr2{left:42%}
+#scr3{left:48%}
+#scr4{left:54%}
+
+#Iscr0{left:30%}
+#Iscr1{left:36%}
+#Iscr2{left:42%}
+#Iscr3{left:48%}
+#Iscr4{left:54%}
+
+#skunk{display: none;}
+#Iskunk{display: none;}
+
+.aut{position:absolute;
+top:30%;left:50%;transform:translate(-50%,0%);}
+#peppetext{display: none}
+#matteotext{display: none}
+#enniotext{display: none}
+#danitext{display: none}
+
+#Ipeppetext{display: none}
+#Imatteotext{display: none}
+#Ienniotext{display: none}
+#Idanitext{display: none}
+
+#tg1{
+	position: absolute;
+	display: none;
+	width: 150px;
+	height: 300px;
+	top: 0px;
+	left: 650px;
+	transform: translate(0px, -300px);
+}
+#tg2{
+	position: absolute;
+	display: none;
+	width: 150px;
+	height: 300px;
+	top: 0px;
+	left: 650px;
+	transform: translate(0px, -350px);
+}
+#tg3{
+	position: absolute;
+	display: none;
+	width: 150px;
+	height: 300px;
+	top: 0px;
+	left: 650px;
+	transform: translate(0px, -350px);
+}
+#tg1ita{
+	position: absolute;
+	display: none;
+	width: 150px;
+	height: 300px;
+	top: 0px;
+	left: 650px;
+	transform: translate(0px, -300px);
+}
+#tg2ita{
+	position: absolute;
+	display: none;
+	width: 150px;
+	height: 300px;
+	top: 0px;
+	left: 650px;
+	transform: translate(0px, -350px);
+}
+#tg3ita{
+	position: absolute;
+	display: none;
+	width: 150px;
+	height: 300px;
+	top: 0px;
+	left: 650px;
+	transform: translate(0px, -350px);
+}
+
+.gametext{
+	z-index: 350;
+}
+#frecceita{
+width:1200px;
+height:550px;
+	background-image: url("./sprites/freccette3.png");
+transform: translate(-10px,-30px);}
+
+	#frecce{
+	width:1200px;
+	height:550px;
+		background-image: url("./sprites/freccette3.png");
+	transform: translate(-10px,-30px)}

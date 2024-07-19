@@ -1,0 +1,722 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<style>
+body{background-color: black}
+div{border-radius: 15%;
+    border:3px solid black}
+
+#piu{background-color: red;
+ width:30px;
+ position: absolute;
+ top:35%;
+ font-size: 30px;
+ transform: translate(0%,-50%);
+ text-align: center;}
+#piu4{background-color: red;
+  width:30px;
+  position: absolute;
+  top:15%;
+  font-size: 30px;
+  transform: translate(0%,-50%);
+  text-align: center;}
+#piu8{background-color: red;
+   width:30px;
+   position: absolute;
+   top:55%;
+   font-size: 30px;
+   transform: translate(0%,-50%);
+   text-align: center;}
+#piu10{background-color: red;
+     width:30px;
+     position: absolute;
+     top:75%;
+     font-size: 30px;
+     transform: translate(0%,-50%);
+     text-align: center;}
+#piu12{background-color: red;
+         width:30px;
+         position: absolute;
+         top:95%;
+         font-size: 30px;
+         transform: translate(0%,-50%);
+         text-align: center;}
+#piu20{background-color: red;
+                 width:30px;
+                 position: absolute;
+                 top:115%;
+                 font-size: 30px;
+                 transform: translate(0%,-50%);
+                 text-align: center;}
+#piup{background-color: red;
+                                  width:30px;
+                                  position: absolute;
+                                  top:135%;
+                                  font-size: 30px;
+                                  transform: translate(0%,-50%);
+                                  text-align: center;}
+
+#meno{background-color: blue;
+ width:30px;
+ position: absolute;
+ top:40%;
+ font-size: 30px;
+ transform: translate(0%,-50%);
+ text-align: center;}
+#meno4{background-color: blue;
+  width:30px;
+  position: absolute;
+  top:20%;
+  font-size: 30px;
+  transform: translate(0%,-50%);
+  text-align: center;}
+#meno8{background-color: blue;
+   width:30px;
+   position: absolute;
+   top:60%;
+   font-size: 30px;
+   transform: translate(0%,-50%);
+   text-align: center;}
+#meno10{background-color: blue;
+     width:30px;
+     position: absolute;
+     top:80%;
+     font-size: 30px;
+     transform: translate(0%,-50%);
+     text-align: center;}
+#meno12{background-color: blue;
+         width:30px;
+         position: absolute;
+         top:100%;
+         font-size: 30px;
+         transform: translate(0%,-50%);
+         text-align: center;}
+#meno20{background-color: blue;
+                  width:30px;
+                  position: absolute;
+                  top:120%;
+                  font-size: 30px;
+                  transform: translate(0%,-50%);
+                  text-align: center;}
+#menop{background-color: blue;
+                                    width:30px;
+                                    position: absolute;
+                                    top:140%;
+                                    font-size: 30px;
+                                    transform: translate(0%,-50%);
+                                    text-align: center;}
+
+#lancio{background-color: green;
+ width:30px;
+ height:30px;
+ position: absolute;
+ top:45%;
+ font-size: 30px;
+ transform: translate(0%,-50%);
+ text-align: center;}
+#lancio4{background-color: green;
+  width:30px;
+  height:30px;
+  position: absolute;
+  top:25%;
+  font-size: 30px;
+  transform: translate(0%,-50%);
+  text-align: center;}
+#lancio8{background-color: green;
+   width:30px;
+   height:30px;
+   position: absolute;
+   top:65%;
+   font-size: 30px;
+   transform: translate(0%,-50%);
+   text-align: center;}
+#lancio10{background-color: green;
+      width:30px;
+      height:30px;
+      position: absolute;
+      top:85%;
+      font-size: 30px;
+      transform: translate(0%,-50%);
+      text-align: center;}
+#lancio12{background-color: green;
+            width:30px;
+            height:30px;
+            position: absolute;
+            top:105%;
+            font-size: 30px;
+            transform: translate(0%,-50%);
+            text-align: center;}
+#lancio20{background-color: green;
+                        width:30px;
+                        height:30px;
+                        position: absolute;
+                        top:125%;
+                        font-size: 30px;
+                        transform: translate(0%,-50%);
+                        text-align: center;}
+#lanciop{background-color: green;
+                                                width:30px;
+                                                height:30px;
+                                                position: absolute;
+                                                top:145%;
+                                                font-size: 30px;
+                                                transform: translate(0%,-50%);
+                                                text-align: center;}
+
+#dado{
+ position:absolute;
+ top:40%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+#dado4{
+ position:absolute;
+ top:20%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+#dado8{
+ position:absolute;
+ top:60%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+#dado10{
+ position:absolute;
+ top:80%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+#dado12{
+ position:absolute;
+ top:100%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+#dado20{
+ position:absolute;
+ top:120%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+#dadop{
+ position:absolute;
+ top:140%;
+ left:5%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact
+}
+.gimmi{
+ position:absolute;
+ top:50%;
+ left:10%;
+ width:100px;
+ height:100px;
+ background-color:white;
+ transform: translate(0%,-50%);
+ font-size: 70px;
+ text-align: center;
+ line-height: 100px;
+ font-family: impact;
+ animation-duration: 2s
+}
+ .gimmi4{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background-color:white;
+  transform: translate(0%,-50%);
+  font-size: 70px;
+  text-align: center;
+  line-height: 100px;
+  font-family: impact;
+  animation-duration: 2s
+ }
+ .gimmi8{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background-color:white;
+  transform: translate(0%,-50%);
+  font-size: 70px;
+  text-align: center;
+  line-height: 100px;
+  font-family: impact;
+  animation-duration: 2s
+ }
+ .gimmi10{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background-color:white;
+  transform: translate(0%,-50%);
+  font-size: 70px;
+  text-align: center;
+  line-height: 100px;
+  font-family: impact;
+  animation-duration: 2s
+ }
+ .gimmi12{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background-color:white;
+  transform: translate(0%,-50%);
+  font-size: 70px;
+  text-align: center;
+  line-height: 100px;
+  font-family: impact;
+  animation-duration: 2s
+ }
+ .gimmi20{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background-color:white;
+  transform: translate(0%,-50%);
+  font-size: 70px;
+  text-align: center;
+  line-height: 100px;
+  font-family: impact;
+  animation-duration: 2s
+ }
+ .gimmip{
+  position:absolute;
+  top:50%;
+  left:10%;
+  width:100px;
+  height:100px;
+  background-color:white;
+  transform: translate(0%,-50%);
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  font-family: impact;
+  animation-duration: 2s
+ }
+#tutto{
+  position: absolute;
+  top:5%;
+  left:5%;
+  width:50px;
+  height:50px;
+  background-color: yellow
+}
+</style>
+</head>
+
+<body>
+
+  <div id="tutto"></div>
+
+<div id="dado4" class="gimmi4">d4</div>
+<div id="dado" class="gimmi">d6</div>
+<div id="dado8" class="gimmi8">d8</div>
+<div id="dado10" class="gimmi10">d10</div>
+<div id="dado12" class="gimmi12">d12</div>
+<div id="dado20" class="gimmi20">d20</div>
+<div id="dadop" class="gimmip">d%</div>
+
+
+<div id="piu4">+</div>
+<div id="meno4">-</div>
+<div id="lancio4"></div>
+
+<div id="piu">+</div>
+<div id="meno">-</div>
+<div id="lancio"></div>
+
+<div id="piu8">+</div>
+<div id="meno8">-</div>
+<div id="lancio8"></div>
+
+<div id="piu10">+</div>
+<div id="meno10">-</div>
+<div id="lancio10"></div>
+
+<div id="piu12">+</div>
+<div id="meno12">-</div>
+<div id="lancio12"></div>
+
+<div id="piu20">+</div>
+<div id="meno20">-</div>
+<div id="lancio20"></div>
+
+<div id="piup">+</div>
+<div id="menop">-</div>
+<div id="lanciop"></div>
+
+<script>
+var a =1
+var a4 =1
+var a8 =1
+var a10=1
+var a12=1
+var a20=1
+var ap=1
+
+function ag4() {
+  a4=a4+1
+  for(i=1; i<a4; i++){
+    var e = $("<div>")
+    e.addClass("gimmi4")
+    e.css({"position":"absolute",
+      left: i*120})
+    $("#dado4").append(e)}
+}
+
+function ln4() {
+ for(i=1; i<a4; i++){
+  var e = $("<div>")
+  e.addClass("gimmi4")
+  e.css({"position":"absolute",
+    left: i*120,
+    "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+    "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+    "animation":"ruota"})
+    e.text(Math.floor(Math.random()*4)+1)
+  $("#dado4").append(e)}
+}
+
+ function to4(){
+   $(".gimmi4").text("")
+   $("#dado4").text("d4")
+   $("div").removeClass("gimmi4")
+   a4=a4-1
+   for(i=1; i<a4; i++){
+     var e = $("<div>")
+     e.addClass("gimmi4")
+     e.css({"position":"absolute",
+       left: i*120,})
+     $("#dado4").append(e)}
+ }
+
+
+
+
+function ag() {
+  a=a+1
+  for(i=1; i<a; i++){
+    var e = $("<div>")
+    e.addClass("gimmi")
+    e.css({"position":"absolute",
+      left: i*120})
+    $("#dado").append(e)}
+}
+
+function ln() {
+ for(i=1; i<a; i++){
+  var e = $("<div>")
+  e.addClass("gimmi")
+  e.css({"position":"absolute",
+    left: i*120,
+    "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+    "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+    "animation":"ruota"})
+    e.text(Math.floor(Math.random()*6)+1)
+  $("#dado").append(e)}
+}
+
+ function to(){
+   $(".gimmi").text("")
+   $("#dado").text("d6")
+   $("div").removeClass("gimmi")
+   a=a-1
+   for(i=1; i<a; i++){
+     var e = $("<div>")
+     e.addClass("gimmi")
+     e.css({"position":"absolute",
+       left: i*120,})
+     $("#dado").append(e)} }
+
+
+
+
+ function ag8() {
+   a8=a8+1
+   for(i=1; i<a8; i++){
+     var e = $("<div>")
+     e.addClass("gimmi8")
+     e.css({"position":"absolute",
+       left: i*120})
+     $("#dado8").append(e)}
+      }
+
+ function ln8() {
+  for(i=1; i<a8; i++){
+   var e = $("<div>")
+   e.addClass("gimmi8")
+   e.css({"position":"absolute",
+     left: i*120,
+     "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+     "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+     "animation":"ruota"})
+     e.text(Math.floor(Math.random()*8)+1)
+   $("#dado8").append(e)}
+ }
+
+  function to8(){
+    $(".gimmi8").text("")
+    $("#dado8").text("d8")
+    $("div").removeClass("gimmi8")
+    a8=a8-1
+    for(i=1; i<a8; i++){
+      var e = $("<div>")
+      e.addClass("gimmi8")
+      e.css({"position":"absolute",
+        left: i*120,})
+      $("#dado8").append(e)}
+  }
+
+
+
+
+  function ag10() {
+    a10=a10+1
+    for(i=1; i<a10; i++){
+      var e = $("<div>")
+      e.addClass("gimmi10")
+      e.css({"position":"absolute",
+        left: i*120})
+      $("#dado10").append(e)}
+       }
+
+  function ln10() {
+   for(i=1; i<a10; i++){
+    var e = $("<div>")
+    e.addClass("gimmi10")
+    e.css({"position":"absolute",
+      left: i*120,
+      "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+      "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+      "animation":"ruota"})
+      e.text(Math.floor(Math.random()*10)+1)
+    $("#dado10").append(e)}
+  }
+
+   function to10(){
+     $(".gimmi10").text("")
+     $("#dado10").text("d10")
+     $("div").removeClass("gimmi10")
+     a10=a10-1
+     for(i=1; i<a10; i++){
+       var e = $("<div>")
+       e.addClass("gimmi10")
+       e.css({"position":"absolute",
+         left: i*120,})
+       $("#dado10").append(e)}
+   }
+
+
+
+
+   function ag12() {
+     a12=a12+1
+     for(i=1; i<a12; i++){
+       var e = $("<div>")
+       e.addClass("gimmi12")
+       e.css({"position":"absolute",
+         left: i*120})
+       $("#dado12").append(e)}
+        }
+
+   function ln12() {
+    for(i=1; i<a12; i++){
+     var e = $("<div>")
+     e.addClass("gimmi12")
+     e.css({"position":"absolute",
+       left: i*120,
+       "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+       "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+       "animation":"ruota"})
+       e.text(Math.floor(Math.random()*12)+1)
+     $("#dado12").append(e)}
+   }
+
+    function to12(){
+      $(".gimmi12").text("")
+      $("#dado12").text("d12")
+      $("div").removeClass("gimmi12")
+      a12=a12-1
+      for(i=1; i<a12; i++){
+        var e = $("<div>")
+        e.addClass("gimmi12")
+        e.css({"position":"absolute",
+          left: i*120,})
+        $("#dado12").append(e)}
+    }
+
+
+
+    function ag20() {
+      a20=a20+1
+      for(i=1; i<a20; i++){
+        var e = $("<div>")
+        e.addClass("gimmi20")
+        e.css({"position":"absolute",
+          left: i*120})
+        $("#dado20").append(e)}
+         }
+
+    function ln20() {
+     for(i=1; i<a20; i++){
+      var e = $("<div>")
+      e.addClass("gimmi20")
+      e.css({"position":"absolute",
+        left: i*120,
+        "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+        "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+        "animation":"ruota"})
+        e.text(Math.floor(Math.random()*20)+1)
+      $("#dado20").append(e)}
+    }
+
+     function to20(){
+       $(".gimmi20").text("")
+       $("#dado20").text("d20")
+       $("div").removeClass("gimmi20")
+       a20=a20-1
+       for(i=1; i<a20; i++){
+         var e = $("<div>")
+         e.addClass("gimmi20")
+         e.css({"position":"absolute",
+           left: i*120,})
+         $("#dado20").append(e)}
+     }
+
+
+
+function agp() {
+       ap=ap+1
+       for(i=1; i<ap; i++){
+         var e = $("<div>")
+         e.addClass("gimmip")
+         e.css({"position":"absolute",
+           left: i*120})
+         $("#dadop").append(e)}
+          }
+
+function lnp() {
+      for(i=1; i<ap; i++){
+       var e = $("<div>")
+       e.addClass("gimmip")
+       e.css({"position":"absolute",
+         left: i*120,
+         "background-color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+         "color":"rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")",
+         "animation":"ruota"})
+         e.text(Math.floor(Math.random()*100)+1+"%")
+       $("#dadop").append(e)}
+     }
+
+function toper(){
+        $(".gimmip").text("")
+        $("#dadop").text("d%")
+        $("div").removeClass("gimmip")
+        ap=ap-1
+        for(i=1; i<ap; i++){
+          var e = $("<div>")
+          e.addClass("gimmip")
+          e.css({"position":"absolute",
+            left: i*120,})
+          $("#dadop").append(e)}
+      }
+
+
+
+$("#piu").on("click", ag)
+$("#meno").on("click", to)
+$("#lancio").on("click", ln)
+
+$("#piu4").on("click", ag4)
+$("#meno4").on("click", to4)
+$("#lancio4").on("click", ln4)
+
+$("#piu8").on("click", ag8)
+$("#meno8").on("click", to8)
+$("#lancio8").on("click", ln8)
+
+$("#piu10").on("click", ag10)
+$("#meno10").on("click", to10)
+$("#lancio10").on("click", ln10)
+
+$("#piu12").on("click", ag12)
+$("#meno12").on("click", to12)
+$("#lancio12").on("click", ln12)
+
+$("#piu20").on("click", ag20)
+$("#meno20").on("click", to20)
+$("#lancio20").on("click", ln20)
+
+$("#piup").on("click", agp)
+$("#menop").on("click", toper)
+$("#lanciop").on("click", lnp)
+
+$("#tutto").on("click", a4=11, ln4)
+$("#tutto").on("click", a=11, ln)
+$("#tutto").on("click", a8=11,ln8)
+$("#tutto").on("click", a10=11, ln10)
+$("#tutto").on("click", a12=11,ln12)
+$("#tutto").on("click", a20=11,ln20)
+$("#tutto").on("click", ap=11,lnp)
+</script>
+</body>
+<html>
