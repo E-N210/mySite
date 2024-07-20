@@ -201,6 +201,7 @@ h5{
       flex-wrap: wrap;
     }
 
+
     .columnList{
         font-weight: bold;
         line-height: 150%;
@@ -439,8 +440,16 @@ h5{
 
             @media only screen and  (max-width: 600px) {
 
-              .columnList{width:90%; column-count: 2;
+              .columnList{width:70%; column-count: 1;
               left:0%;}
+
+              .image_list.right{position:relative;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row;
+                left:2.5%;
+                flex-wrap: wrap;
+              }
 
               #audioScape{
                 width:80vw; height:70vh;pointer-events: unset
