@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./newstyle.css" />
+    <link rel="stylesheet" type="text/css" href="./newstyle_mobile.css" />
     <script src="./jquery-3.6.0.min.js"></script>
     <title></title>
   </head>
@@ -49,10 +49,10 @@
         <div style="padding-left:5vw;padding-top: 50px;font-size:2.75em; font-weight:bolder; color:white"> My Works </div>
 
                           <div class="video_container1">
-                            <video loading="lazy" loop src="./imgs/WhaleVideo.mp4" id="whaleVideoMobile" alt=""></video>
+                            <video controls loading="lazy" loop src="./imgs/WhaleVideo.mp4" id="whaleVideoMobile" alt=""></video>
 
-                            <video loading="lazy" loop src="./imgs/CatVideo.mp4" id="catVideoMobile" alt=""></video>
-                            <video loading="lazy" loop src="./imgs/wordVideo.mp4" id="wordVideoMobile" alt=""></video>
+                            <video controls loading="lazy" loop src="./imgs/CatVideo.mp4" id="catVideoMobile" alt=""></video>
+                            <video controls loading="lazy" loop src="./imgs/wordVideo.mp4" id="wordVideoMobile" alt=""></video>
                           </div>
                           <div style="padding-left:5vw; padding-right:5vw;">
 
@@ -474,9 +474,9 @@
         </div>
 -->
               <div class="video_container1">
-                <video  loop src="./imgs/whaleVideo3.mp4" id="whaleVideo" alt=""></video>
-                <video  loop src="./imgs/CatVideo.mp4" id="catVideo" alt=""></video>
-                <video  loop src="./imgs/wordVideo.mp4" id="wordVideo" alt=""></video>
+                <video controls loop src="./imgs/whaleVideo3.mp4" id="whaleVideo" alt=""></video>
+                <video controls loop src="./imgs/CatVideo.mp4" id="catVideo" alt=""></video>
+                <video controls loop src="./imgs/wordVideo.mp4" id="wordVideo" alt=""></video>
               </div>
 
               <div style="padding-left:5vw; padding-right:5vw; padding-top:30px; padding-bottom:50px; gap:10px">
@@ -543,12 +543,12 @@
               <p class="centered">Leave your message and see what other people has written. View messages in Augmented Reality all around the globe!</p>
 
             <div class ="projectGallery">
-              <div>
+              <div class="flexBasis">
                 <img class="collage"src="./imgs/12.jpg" alt=""></img>
                 <p style="text-align:center">Access the app anywhere</p>
               </div>
 
-              <div>
+                <div class="flexBasis">
                 <img class="collage"src="./imgs/11.jpg" alt=""></img>
                 <p style="text-align:center">Look for messages around you</p>
               </div>
@@ -557,11 +557,11 @@
                 <p style="text-align:center">Add your own message</p>
               </div>
 
-              <div>
+            <div class="flexBasis">
                 <img class="collage"src="./imgs/3.jpg" alt=""></img>
                 <p style="text-align:center">See what other users have written</p>
               </div>
-              <div>
+            <div class="flexBasis">
                 <img class="collage"src="./imgs/5.jpg" alt=""></img>
                 <p style="text-align:center">See all the messages people have placed</p>
               </div>
@@ -602,8 +602,8 @@
 
             </div>
 
-            <div>
-              <div class ="projectGallery2">
+            <div class="flexBasis">
+              <div class ="projectGallery2 flexBasis">
 
               <img class="collage"src="./imgs/L2.jpeg" alt=""></img>
               <img class="collage"src="./imgs/L3.jpeg" alt=""></img>
@@ -736,9 +736,9 @@
 
 
           <div class="video_container1 bis"  >
-            <video  loop src="./imgs/a1.mov" id="videoAS1"></video>
-            <video  loop src="./imgs/a2.mov" id="videoAS2"></video>
-            <video  loop src="./imgs/a4.mov" id="videoAS4"></video>
+            <video controls loop src="./imgs/a1.mov" id="videoAS1"></video>
+            <video controls loop src="./imgs/a2.mov" id="videoAS2"></video>
+            <video controls loop src="./imgs/a4.mov" id="videoAS4"></video>
           </div>
 
 
@@ -877,15 +877,7 @@
       })
 
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var containers = document.getElementsByClassName("video_container1");
-        Array.from(containers).forEach(function(container) { // Fixed method name and added index
-        Array.from(container.children).forEach(function(video) { // Used Array.from to convert HTMLCollection to array
-          video.muted = true; // Ensures video is muted
-          video.play()
-        })
-      })
-               } )
+
 
                $("#audioScapeContainer").on("click", function(){
                  var frame = document.getElementById("audioScape")
@@ -1002,6 +994,17 @@ console.log("we are on mobile")
 else{
   setInterval(update, 200)
   $(".menuItem").hide()
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var containers = document.getElementsByClassName("video_container1");
+    Array.from(containers).forEach(function(container) { // Fixed method name and added index
+    Array.from(container.children).forEach(function(video) { // Used Array.from to convert HTMLCollection to array
+      video.muted = true; // Ensures video is muted
+      video.play()
+    })
+  })
+           } )
+
 }
 
 
