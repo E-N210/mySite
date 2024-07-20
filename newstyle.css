@@ -171,9 +171,7 @@ h5{
       font-size: 60px;
       text-overflow:ellipsis;
       margin: 0px;
-      font-weight: bolder;
-      padding-top: 120px;
-      padding-bottom: 50px;
+      font-weight: bolder
     }
 
     h1.special{
@@ -183,14 +181,7 @@ h5{
     }
 
     h3{
-      width: 100%;
-      text-align: center;
-      font-size: 60px;
-      text-overflow:ellipsis;
-      margin: 0px;
-      font-weight: bolder;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      font-size: 1.5em
     }
 
 
@@ -448,6 +439,9 @@ h5{
 
             @media only screen and  (max-width: 600px) {
 
+              .columnList{width:90%; column-count: 2;
+              left:0%;}
+
               #audioScape{
                 width:80vw; height:70vh;pointer-events: unset
               }
@@ -518,12 +512,13 @@ h5{
                 p{max-width: 80vw; font-size: 1em; width:100%}
                 p.centered{max-width: 80%}
 
-                .img_banner{object-fit: none; transform: translate(-35%,10%);position: relative; max-width: 550px; max-height: 550px;min-width: 500px;}
+                .img_banner{object-fit: none; transform: translate(-35%,0%); padding-top:50px;position: relative; max-width: 550px; max-height: 550px;min-width: 500px;}
                 .evidenceContainer{display: none}
 
-                h1{font-size: 3em}
+                h1{font-size: 3em; padding-bottom: 30px}
 
-                .theorical_skill_right{width:80%; left:5%}
+                .theorical_skill{width:80%; left:0%; padding-top:0px}
+                .theorical_skill_right{width:80%; left:0%; padding-top:0px; display: flex;flex-direction: column;align-items: flex-end;}
 
                 button{width: auto; max-width: 80vw}
                 #spacer_menu{display: none}
