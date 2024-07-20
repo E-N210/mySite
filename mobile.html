@@ -313,7 +313,7 @@
           This section offers an overview of my experiences and skills. You can explore my background and my set of skills, ranging from technical software proficiencies to more theoretical ones. You can also follow my formation and the experiences i made.
         </p>
     </div>
-    
+
       <div class=" flexBasis">
       <h4>Message in AR bottle</h4>
           <p class="centered">Leave your message and see what other people has written. View messages in Augmented Reality all around the globe!</p>
@@ -402,10 +402,93 @@
         <h4>La Leggenda di Colapese</h4>
           <p class="centered">La Leggenda di Colapesce is an interactive Gamebook which let you discover different possible paths of the tale of our main charachter Colapesce</p>
 
+          <div class ="projectGallery3">
+            <h5 style="text-align:center">The Story <br>(Scroll to view all the images)</h5>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/scoglieradef.png" alt=""></img>
+              <p style="text-align:center">Here is our protagonist</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/reggia2.png" alt=""></img>
+              <p style="text-align:center">Colapesce is called by the king</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/colapescepesciluminosi.png" alt=""></img>
+              <p style="text-align:center">Colapesce deep into the abyss</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/vulcanodef.png" alt=""></img>
+              <p style="text-align:center">Colapesce finds something strange</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/reggia3.png" alt=""></img>
+              <p style="text-align:center">The king throws the Crown in the sea </p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/colonnescoperte.png" alt=""></img>
+              <p style="text-align:center">3 pillars are surrecting Siciliy. One is up to break</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/colapescereggecolonna.png" alt=""></img>
+              <p style="text-align:center">Colapesce stays there surrecting the pillar</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/Colopesceincoronato.png" alt=""></img>
+              <p style="text-align:center">Colapesce is crowned prince of the seas</p>
+            </div>
+        </div>
+        <h4 style="width:100%; text-align: center">About the Project</h4>
+        <p>
+          The main pictures of our stories were created using 3DSmax and V-ray as render engine. We got a lot of fun creating all the merine creatures and scenarios. The court of the king is inspired by the Reggia di Palermo in Sicily and the king is based upon Federico II.<br><br>Some of the interaction in the story are resolved through some mini platform realized with Phaser.io. You can try them below, while exploring our story. (Desktop Only!)</p>
+
+          <h5 class="h5MobileBody">Minigames</h5>
+          <div class ="projectGallery4">
+            <div class="flexBasis">
+              <img class="collage"src="./imgs/SC3.png" alt=""></img>
+              <p style="text-align:center">Take back the crown</p>
+            </div>
+
+            <div class="flexBasis">
+            <img class="collage"src="./imgs/SC2.png" alt=""></img>
+              <p style="text-align:center">Shot the crabs</p>
+            </div>
+
+            <div class="flexBasis">
+              <img class="collage"src="./imgs/SC1.png" alt=""></img>
+              <p style="text-align:center">Exit the labirinth</p>
+            </div>
+          </div>
       </div>
+
 
         <div class=" flexBasis">
             <h4>AudioScape</h4>
+            <p class="centered">AudioScape is aseries of sound-reactive sketches realized with P5.js press the button snd turn every sound into awesome visuals!</p>
+
+
+            <div id="audioScapeContainer"style="display:flex; flex-direction:column;gap:20px; align-items:center">
+              <button id="startAudioScape" class="single">START AUDIOSCAPE</button>
+              <iframe id="audioScape" src="./empty.html" style="" ></iframe>
+            </div>
+
+              <h4 style="width:100%;text-align: center">About the Project</h4>
+              <p >
+                The main pictures of our stories were created using 3DSmax and V-ray as render engine. We got a lot of fun creating all the merine creatures and scenarios. The court of the king is inspired by the Reggia di Palermo in Sicily and the king is based upon Federico II.<br><br>Some of the interaction in the story are resolved through some mini platform realized with Phaser.io. You can try them below, while exploring our story. (Desktop Only!)
+              </p>
+
+              <div class="video_container1 bis"  >
+                <video controls loop src="./imgs/a1.mov" id="videoAS1"></video>
+                <video controls loop src="./imgs/a2.mov" id="videoAS2"></video>
+                <video controls loop src="./imgs/a4.mov" id="videoAS4"></video>
+              </div>
           </div>
 
             <div class=" flexBasis">
@@ -474,5 +557,12 @@
       aboutPage.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
   })
+
+  $("#audioScapeContainer").on("click", function(){
+    var frame = document.getElementById("audioScape")
+    frame.src="mistretta_sfondi/index.html"
+
+  })
+
   </script>
 </html>

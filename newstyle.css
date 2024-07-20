@@ -462,9 +462,9 @@ h5{
                                       .projectGallery3{
                                         grid-gap:20px;
                                         overflow-y: scroll;
-                                        height: 80vh;
+                                        height: 70vh;
                                         display: flex; flex-direction: column;
-                                        justify-items:center;align-items: flex-end;
+                                        justify-items:center;align-items: center
 
                                       }
                                       .projectGallery3 img{ max-width: 100%; border-radius: 10px}
@@ -485,7 +485,8 @@ h5{
               .video_container1{display: flex; padding-top: 5px;padding-left:0vw; padding-right: 0vw;  padding-bottom:0px;
                 width:100vw; overflow-x: scroll}
 
-              .video_container1 video{object-fit: cover; width:65%; height: 50vh}
+              .video_container1 video{object-fit: cover; width:100vw; height: 25vh; min-width: 600px}
+
               #whaleVideoMobile{width:70vw}
 
 
