@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./newstyle_mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./newstyle.css" />
     <script src="./jquery-3.6.0.min.js"></script>
     <title></title>
   </head>
@@ -990,23 +990,23 @@ function isMobileDevice() {
 }
 if(isMobileDevice()){
 console.log("we are on mobile")
+ window.location.href = "./mobile.html";
 }
-else{
-  setInterval(update, 200)
-  $(".menuItem").hide()
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var containers = document.getElementsByClassName("video_container1");
-    Array.from(containers).forEach(function(container) { // Fixed method name and added index
-    Array.from(container.children).forEach(function(video) { // Used Array.from to convert HTMLCollection to array
-      video.muted = true; // Ensures video is muted
-      video.play()
-    })
+
+document.addEventListener('DOMContentLoaded', function() {
+  var containers = document.getElementsByClassName("video_container1");
+  Array.from(containers).forEach(function(container) { // Fixed method name and added index
+  Array.from(container.children).forEach(function(video) { // Used Array.from to convert HTMLCollection to array
+    video.muted = true; // Ensures video is muted
+    video.play()
   })
-           } )
+})
+         } )
 
-}
+         $(".menuItem").hide()
 
+  setInterval(update, 200)
 
 
 
