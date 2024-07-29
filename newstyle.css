@@ -10,6 +10,9 @@ body{font-family:sans-serif;
 
  }
 
+ #aboutMenu{position: absolute; z-index: 10; background-color: rgb(235,235,235); width:100vw;height:1000vh}
+ #projectMenu{position: absolute; z-index: 10; background-color: rgb(235,235,235); width:100vw;height:1000vh}
+
  .flexBasis{display: flex;flex-direction: column;align-items: center;}
 
  #mainPage{
@@ -18,6 +21,7 @@ body{font-family:sans-serif;
    flex-direction: column;
    align-items: center;
    overflow-x: hidden;
+   justify-content: flex-start;
  }
 
  #mainPage.hovered{
@@ -78,6 +82,7 @@ body{font-family:sans-serif;
 
 
 #profile_text{ width:80%; font-size:20px; max-height:20vh; display: none}
+
 #sendEmail{margin-left: 30px; display: none}
 
 button{
@@ -122,6 +127,20 @@ border-color: rgb(235,235,235)
 
     p.centered{ text-align: center; max-width: 40vw}
 
+    p.animated1{ white-space: nowrap;
+        font-size: 28px;
+  overflow: hidden;
+  animation: animated-text 10s steps(29,end) 1s infinite normal both}
+
+  .animated{white-space: pre-wrap; background-blend-mode: overlay;
+  color:rgb(235,235,235);background-color: rgb(30,45,54); font-size:1.5em;
+  margin-top: 50px;    width: fit-content;}
+
+    @keyframes animated-text{
+  from{width: 0;}
+  to{width: 320px}
+}
+
 
   h2{
     cursor: pointer;
@@ -130,8 +149,7 @@ border-color: rgb(235,235,235)
     justify-content: center;
     width: 100%;
     height: 100px;
-    background-color: rgba(34, 40, 54);
-    color: rgb(235,235,235);
+    color: rgb(30,45,54);
     opacity: 1;
     text-align: center;
     font-size: 30px;
@@ -165,6 +183,8 @@ h5{
   }
 
     h1{
+      padding-top: 100px;
+      padding-bottom: 50px;
       width: 100%;
       color: rgb(34, 40, 54);
       text-align: center;
@@ -217,14 +237,14 @@ h5{
         position:relative;
         color:rgb(34, 40, 54);
         width:80%;
-        margin-bottom: 25px;
+        margin-bottom: 100px;
         left:5%;}
 
         .theorical_skill_right{
           padding-top:100px;
         position:relative;  color:rgb(40, 40, 40);
         width:60%;
-        margin-bottom: 25px;
+        margin-bottom: 100px;
         left:40%;}
 
           .menuItem{padding-bottom: 100px; margin-top: 1%;}
@@ -354,9 +374,8 @@ h5{
             .projectGallery{
               grid-gap:20px;
               overflow-x: scroll;
-              width: 80vw;
-              display: grid;
-              grid-template-areas: "a b c d e";
+              max-width: 100%;
+              display: flex
             }
             .projectGallery img{ max-width: 20vw; border-radius: 30px}
 
@@ -368,7 +387,19 @@ h5{
               grid-template-areas: "a b c d";
               justify-items:center
             }
+
+            .projectGallery2bis{
+              grid-gap:20px;
+              overflow-x: scroll;
+              width: 95vw;
+              display: grid;
+              grid-template-areas: "a b c d e F";
+              justify-items:center
+            }
+
             .projectGallery2 img{ max-width: 18vw; border-radius: 0px}
+
+            .projectGallery2bis img{ max-width: 15vw; border-radius: 0px}
 
 
                         .projectGallery3{
@@ -379,18 +410,24 @@ h5{
                           justify-items:center;align-items: flex-end;
 
                         }
-                        .projectGallery3 img{ max-width: 30vw; border-radius: 10px}
+                        .projectGallery3 img{ max-width: 40vw; border-radius: 10px}
 
                         .projectGallery4{
                           grid-gap:20px;
                           overflow-x: scroll;
-                          width: 95vw;
+                          width: 100%;
                           display: flex; flex-direction: row;
                           justify-items:center;
                           justify-content: center;
 
                         }
-                        .projectGallery4 img{ max-width: 25vw; border-radius: 10px}
+                        .projectGallery4 img{ max-width: 26vw; border-radius: 10px}
+
+                        .IGContainer{display: grid;
+                          grid-gap:10px;
+                        grid-template-areas: "a b c" "d e f" "g h i"}
+
+                        .IGContainer img{max-width:15vw}
 
 
             #lichenVideo{width:95vh; height:85vh; border-radius: 30px}
@@ -428,7 +465,7 @@ h5{
             #colapesce{width:80vw; height: 100vh}
 
             #audioScape{
-              width:50vw; height:70vh;pointer-events: unset
+              width:80vw; height:70vh;pointer-events: unset
             }
 
             @media (max-width: 900px) {
@@ -524,7 +561,7 @@ h5{
                 .img_banner{object-fit: none; transform: translate(-35%,0%); padding-top:50px;position: relative; max-width: 550px; max-height: 550px;min-width: 500px;}
                 .evidenceContainer{display: none}
 
-                h1{font-size: 3em; padding-bottom: 30px}
+                h1{font-size: 3em; padding-bottom: 30px; padding-top: 0px}
 
                 .theorical_skill{width:80%; left:0%; padding-top:0px}
                 .theorical_skill_right{width:80%; left:0%; padding-top:0px; display: flex;flex-direction: column;align-items: flex-end;}
@@ -561,7 +598,7 @@ h5{
 
 
 
-                  .projectCanvas{width:90%}
+                  .projectCanvas{width:100%; height:60%}
 
                   .projectGallery{
                     width: 80vw;
