@@ -1,4 +1,20 @@
+@font-face {
+  font-family: teko;
+  src: url(./fonts/Teko-Bold.ttf);
+  font-weight: bold;
+}
 
+@font-face {
+  font-family: merri;
+  src: url(./fonts/Merriweather-Black.ttf);
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: merri;
+  src: url(./fonts/Merriweather-Bold.ttf);
+  font-weight: bold;
+}
 
 
 body{font-family:sans-serif;
@@ -191,7 +207,7 @@ h5{
       font-size: 60px;
       text-overflow:ellipsis;
       margin: 0px;
-      font-weight: bolder
+      font-weight: bold
     }
 
     h1.special{
@@ -558,7 +574,7 @@ h5{
                 p{max-width: 80vw; font-size: 1em; width:100%}
                 p.centered{max-width: 80%}
 
-                .img_banner{object-fit: none; transform: translate(-35%,0%); padding-top:50px;position: relative; max-width: 550px; max-height: 550px;min-width: 500px;}
+                .img_banner{object-fit: none; transform: translate(-35%,5%); padding-top:50px;position: relative; max-width: 550px; max-height: 550px;min-width: 500px;}
                 .evidenceContainer{display: none}
 
                 h1{font-size: 3em; padding-bottom: 30px; padding-top: 0px}
