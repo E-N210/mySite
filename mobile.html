@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="./newstyle.css" />
+  <link rel="stylesheet" type="text/css" href="./newstyle_mobile.css" />
   <script src="./jquery-3.6.0.min.js"></script>
   <title></title>
 </head>
@@ -21,12 +21,11 @@
 
     <img loading="lazy" id="banner" class="img_banner" src="./imgs/avatar_body-transformed (1).jpeg"></img>
 
-    <div style="padding-top:60px; padding-bottom:50px; padding-left:5vw">
+    <div id="homeScreen"style=" padding-bottom:50px; padding-left:5vw; padding-right:5vw">
     <div style="font-size:3.5em; font-weight:bolder;"> Welcome to<br> my website! </div>
 
-    <p >   Hi! My name is Ennio! I'm a young designer who likes doing crazy stuff. This is a website i made to show some of my works, I hope you enkoy it!
+    <div class="animated3" data-text="Graphic Design | Augmented Reality | Digital Art | UX/UI | Web Design!"></div>
 
-</p>
 <button onclick="window.open('mailto:ennio.sor@gmail.com?subject=feedback', '_blank')" style="width:80%; margin-top:10px"class="single">LET'S GET IN TOUCH</button>
 
     </div>
@@ -39,10 +38,12 @@
         <div class="flexBasis" style="font-size:1.25em; gap:5px">
           <p>Here you can get a quick summary of my abilities and skills and the main softwares i can use</p>
 
-        <!--  <h5>My Skills</h5>
+          <button class="openIndex">Index</button>
+          <div class="index">
+            <h5>My Skills</h5>
             <div id="gotoA1">Software Skills</div>
             <div id="gotoA2">Theorical Skills</div>
-            <div id="gotoA3">Linguistic Skills</div>
+          <!--  <div id="gotoA3">Linguistic Skills</div>
             <br>
             <h5>My Education</h5>
             <div id="gotoA4">High School</div>
@@ -53,6 +54,7 @@
             <div id="gotoA8">D.O.S.</div>
             <div id="gotoA9">Notomia</div>
             <div id="gotoA0">Tokenance</div><br>-->
+          </div>
           </div>
         </div>
 
@@ -341,6 +343,11 @@
         <h1 style="padding-top:0px">My Projects</h1>
 
       <div class="flexBasis" style="font-size:1.25em; gap:5px">
+        <p>Here you can get a quick summary of my abilities and skills and the main softwares i can use</p>
+
+                  <button class="openIndex"><i>Index</i></button>
+
+        <div class="index">
           <h5>Augmented Reality</h5>
             <div id="gotoP1">Message in AR Bottle</div>
             <div id="gotoP2">Unseen Indicators</div><br>
@@ -351,19 +358,22 @@
             <div id="gotoP5">AudioScape</div>
             <div id="gotoP6">Dark Dreams</div>
             <div id="gotoP7">Under the Surface</div><br>
-          <!--<h5>Graphic Design</h5>
-            <div id="gotoP7">Le loro strade</div>
-            <div id="gotoP8">Erotype</div>-->
+            <!--  <h5>Graphic Design</h5>
+              <div id="gotoP7">Le loro strade</div>
+              <div id="gotoP8">Erotype</div>-->
+
+          </div>
         </div>
 
       </div>
 
+        <h1> Augmented<br> Reality </h1>
 
       <div id="P1"class=" flexBasis"  style="gap:20px; text-align: center">
       <h4>Message <br>in AR bottle</h4>
           <p class="centered">Leave your message and see what other people has written. View messages in Augmented Reality all around the globe!</p>
 
-          <div class ="projectGallery">
+          <div class ="projectGallery" style="width:80vw">
               <div class="flexBasis">
                 <img class="collage"src="./imgs/12.jpg" alt=""></img>
                 <p style="text-align:center">Access the app anywhere</p>
@@ -435,7 +445,7 @@
 
         </div>
 
-
+        <h1> Artificial <br> Intelligence </h1>
 
       <div id="P3" class=" flexBasis"  style="gap:20px">
         <h4>Lil Rhymer</h4>
@@ -446,7 +456,7 @@
 
             <div class="projectCanvas">
               <script src="https://embed.pickaxeproject.com/axe/scripts/pickaxe-parent.js"></script>
-              <iframe id=QKSS5Z729A loading="eager" src="https://embed.pickaxeproject.com/axe?id=lil_rapper_A4BNK&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=16&font_body=Real+Head+Pro&size_body=14&font_labels=Real+Head+Pro&size_labels=10&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_rb=FFFFFF&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=0&s_to=0&s_r=16" width="100%" height="100%"  style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:20px; height:60vh" frameBorder="0"></iframe>
+              <iframe id=QKSS5Z729A loading="eager" src="https://embed.pickaxeproject.com/axe?id=lil_rapper_A4BNK&mode=embed_gold&host=beta&theme=custom&opacity=100&font_header=Real+Head+Pro&size_header=16&font_body=Real+Head+Pro&size_body=14&font_labels=Real+Head+Pro&size_labels=10&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_rb=FFFFFF&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=0&s_to=0&s_r=16" width="100%" height="100%"  style="border:0px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:20px" frameBorder="0"></iframe>
           </div>
           <h5 style="width:100%; text-align: center">About the Project</h5>
           <p>
@@ -454,18 +464,17 @@
           </div>
 
 
-
+        <h1> Digital <br> Storytelling </h1>
 
         <div id="P4" class=" flexBasis"  style="gap:20px">
         <h4 style="text-align: center">La Leggenda <br> di Colapese</h4>
           <p class="centered">La Leggenda di Colapesce is an interactive Gamebook which let you discover different possible paths of the tale of our main charachter Colapesce</p>
 
           <div class ="projectGallery3">
-            <h5 style="text-align:center">The Story <br>(Scroll to view all the images)</h5>
 
             <div class="flexBasis">
               <img class="collage"src="./303_narrazione/sprites/Rander photoshoppati/scoglieradef.png" alt=""></img>
-              <p style="text-align:center">Here is our protagonist</p>
+              <p style="text-align:center">Here is our<br> protagonist</p>
             </div>
 
             <div class="flexBasis">
@@ -511,34 +520,12 @@
           </div>
       </div>
 
+    <div id="P6" class=" flexBasis" style="gap:20px">
+        <h4>Dark Dreams</h4>
 
-        <div id="P5"class=" flexBasis"  style="gap:20px">
-            <h4>AudioScape</h4>
-            <p class="centered">AudioScape is aseries of sound-reactive sketches realized with P5.js press the button snd turn every sound into awesome visuals!</p>
+        <p class="centered">Explore the dreamlike perception of a blind person. You will experience confusion of losing your sight and you will have to find back your guide dog</p>
 
-
-            <div id="audioScapeContainer"style="display:flex; flex-direction:column;gap:20px; align-items:center">
-              <iframe id="audioScape" src="./empty.html" style="" ></iframe>
-            </div>
-
-              <h5 style="width:100%;text-align: center">About the Project</h5>
-              <p >
-                I enjoy the idea of sinesthesia and creating connection between senses. That's what lies behind AudioScape. <br><br> A series of sketches that turns the input from your microphone (captured using p5.sound.js) to turn it into visual arts. The sketches are rsponsive and every frame is generated based on your voice. We can use this system to explore a new world of interactive visual arts, working to create the right visual effect for every music 
-                </p>
-
-              <div class="video_container1 bis"  >
-                <video controls loop src="./imgs/a1.mov" id="videoAS1"></video>
-                <video controls loop src="./imgs/a2.mov" id="videoAS2"></video>
-                <video controls loop src="./imgs/a4.mov" id="videoAS4"></video>
-              </div>
-          </div>
-
-            <div class=" flexBasis" style="gap:20px">
-                  <h4>Dark Dreams</h4>
-
-                  <p class="centered">Explore the dreamlike perception of a blind person. You will experience confusion of losing your sight and you will have to find back your guide dog</p>
-
-                  <div class ="projectGallery">
+          <div class ="projectGallery">
                       <div style="display:flex; gap:40px">
                         <img class="collage"src="./imgs/D0.pNg" alt=""></img>
                         <img class="collage"src="./imgs/D2.gif" alt=""></img>
@@ -572,7 +559,7 @@
 
               </div>
 
-                  <div class=" flexBasis" style="gap:20px">
+                  <div id="P7" class=" flexBasis" style="gap:20px">
                     <h4>Under the Surface</h4>
 
                     <p class="centered">Explore the dreamlike perception of a blind person. You will experience confusion of losing your sight and you will have to find back your guide dog</p>
@@ -615,13 +602,30 @@
                     </div>
                     <button onclick="window.open('https://www.instagram.com/surfunderthesurface?igsh=ZmRoYXhoMHd4d2I0', '_blank')">Try it!</button>
 
-
                   </div>
 
 
+                  <h1> Digital <br> Art </h1>
+                    <div id="P5"class=" flexBasis"  style="gap:20px">
+                        <h4>AudioScape</h4>
+                        <p class="centered">AudioScape is aseries of sound-reactive sketches realized with P5.js press the button snd turn every sound into awesome visuals!</p>
 
 
+                        <div id="audioScapeContainer"style="display:flex; flex-direction:column;gap:20px; align-items:center">
+                          <iframe id="audioScape" src="./empty.html" style="" ></iframe>
+                        </div>
 
+                          <h5 style="width:100%;text-align: center">About the Project</h5>
+                          <p >
+                            I enjoy the idea of sinesthesia and creating connection between senses. That's what lies behind AudioScape. <br><br> A series of sketches that turns the input from your microphone (captured using p5.sound.js) to turn it into visual arts. The sketches are rsponsive and every frame is generated based on your voice. We can use this system to explore a new world of interactive visual arts, working to create the right visual effect for every music
+                            </p>
+
+                          <div class="video_container1 bis"  >
+                            <video controls loop src="./imgs/a1.mov" id="videoAS1"></video>
+                            <video controls loop src="./imgs/a2.mov" id="videoAS2"></video>
+                            <video controls loop src="./imgs/a4.mov" id="videoAS4"></video>
+                          </div>
+                      </div>
 
 
       <!--<div class=" flexBasis">
@@ -633,9 +637,11 @@
         </div>-->
     </div>
 
-    <div style="background-color:rgba(235,235,235,0.7); align-items:flex-start; padding-top:50px" class="flexBasis" id="contactInfo">
+    <div style="background-color:rgba(235,235,235,0.7); align-items:flex-start; padding-top:100px" class="flexBasis" id="contactInfo">
 
-        <h2>Contacts:</h4><br>
+        <div class="animated2" data-text="Graphic Design | Augmented Reality | Digital Art | UX/UI | Web Design!"></div>
+
+        <h1>Contacts:</h1><br>
 
       <div style="text-align:left"><b>Mail:</b>  <a href="mailto:ennio.sor@gmail.com?subject=feedback" target="_blank">ennio.sor@gmail.com</a></div><br>
       <div style="text-align:left"><b>Tel:</b> +39 3894993848</div> <br>
@@ -647,40 +653,84 @@
 
   <script>
 
-  function typeWriter(text, n, container) {
-    //console.log("typewwriter was called")
-if (n < (text.length)) {
-    console.log(container)
-    container.html(text.substring(0, n+1));
-    n++;
-    setTimeout(function() {
-    typeWriter(text, n, container)
-  }, 200);
-}
-else{    setTimeout(function() {
-    typeWriter(text, 0, container); // Reset and start again
-  }, 1000);}
-}
 
 
 
-$(".animated2").each( function(i, item){
+
+  $(".animated2").each( function(i, item){
+
+    var container = $(item);
+    var text = container.data('text').replace(/\n/g, "<br>"); // Corrected line
+    var n= 1
+
+    console.log(text)
+
+    setInterval(function(){
+
+        if(n<text.length){
+          container.html("I'm here for:<br><br>"+text.slice(0, n)+"_")
+
+          setTimeout(function(){
+              container.html("I'm here for:<br><br>"+text.slice(0, n))
+          },150)
+          n++
+          console.log(n)
+        } else{
+
+          setTimeout(function(){
+            n=0
+            container.html("I'm here for:<br><br>_")
+          },1000)
+
+        }
+      }, 200)
+
+
+
+  }
+
+);
+
+$(".animated3").each( function(i, item){
 
   var container = $(item);
-  var text = container.data('text'); // Corrected line
+  var text = container.data('text').replace(/\n/g, "<br>"); // Corrected line
+  var n= 1
+
   console.log(text)
 
-  typeWriter(text, 0, container);}
+  setInterval(function(){
+
+      if(n<text.length){
+
+        setTimeout(function(){
+            container.html("I'm here for:<br>"+text.slice(0, n))
+        },150)
+        n++
+        console.log(n)
+      } else{
+
+        setTimeout(function(){
+          n=0
+          container.html("I'm here for:<br><br>_")
+        },1000)
+
+      }
+    }, 200)
+
+
+
+}
 
 );
 
 
-        var projectPage = document.getElementById('mainListProject');
-        var page =1
-        var offset =75
-        var aboutPage = document.getElementById('mainList');
+  var projectPage = document.getElementById('mainListProject');
+  var page =1
+  var offset =75
+  var aboutPage = document.getElementById('mainList');
 
-        $("#mainList").hide()
+  $("#mainList").hide()
 
   $("#projects").on("click", function(){
     page = 1
@@ -730,6 +780,30 @@ $(".animated2").each( function(i, item){
     window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
   })
 
+  $("#gotoP6").on("click", function(){
+    var element = document.getElementById("P6")
+    var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
+  })
+
+  $("#gotoP7").on("click", function(){
+    var element = document.getElementById("P7")
+    var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
+  })
+
+  $("#gotoA1").on("click", function(){
+    var element = document.getElementById("A1")
+    var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
+  })
+
+  $("#gotoA2").on("click", function(){
+    var element = document.getElementById("A2")
+    var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
+  })
+
 
   $("#about").on("click", function(){
 
@@ -762,6 +836,28 @@ $(".animated2").each( function(i, item){
   $("#contacts").on("click", function(){
     contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
   })
+
+  var openIndex = 0
+  $(".index").hide()
+  $(".openIndex").on(
+      "click", function(){
+        if(openIndex==0){
+          openIndex=1
+          $(".index").fadeIn()}
+          else{
+            openIndex=0
+            $(".index").fadeOut()
+            }
+          }
+  )
+
+  function isMobileDevice() {
+    return !/Mobi|Android/i.test(navigator.userAgent);
+    }
+    if(isMobileDevice()){
+      console.log("we are on mobile")
+      window.location.href = "./index.html";
+  }
 
 
   </script>

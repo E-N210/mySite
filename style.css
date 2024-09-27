@@ -563,3 +563,9 @@ p{position: relative;
 
         #main_content{position: absolute;top:100%;width:100%}
     }
+
+
+    .animated2{
+      color: red;
+      min-height: 250px;
+    }
