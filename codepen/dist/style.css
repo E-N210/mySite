@@ -1,0 +1,39 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.Container {
+  width: 100%;
+  height: 100%;
+  background-color: #576574;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.Container .ImageWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #5f27cd;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.Container .ImageWrapper .AnimatedImage {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  background: url("./f1.png") transparent no-repeat center;
+  background-size: contain;
+  transition: transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: 50% 50%;
+  pointer-events: none;
+}
+.Container .ImageWrapper:hover {
+  cursor: crosshair;
+}
+.Container .ImageWrapper:hover .AnimatedImage {
+  transform: scale(2);
+}

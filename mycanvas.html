@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      html, body {
+  /// default style for root elements
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.Container {
+  width: 100%;
+  height: 100%;
+  background-color: #576574;
+  display: flex;
+  // remember, place content doesn't work on IE
+  // use standard align/justify props
+  place-content: center;
+  place-items: center;
+
+  .ImageWrapper {
+    width: 10rem;
+    height: 10rem;
+    background-color: #5f27cd;
+    border-radius: .5rem;
+    padding: .5rem;
+    overflow: hidden;
+
+    .AnimatedImage {
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      background: url(./f1.png) transparent no-repeat center;
+      background-size: contain;
+      transition: transform .25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      /// default origin is in center
+      transform-origin: 50% 50%;
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: crosshair;
+      .AnimatedImage {
+        transform: scale(40);
+      }
+    }
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="Container">
+      <div class="ImageWrapper">
+        <div class="AnimatedImage"></div>
+      </div>
+    </div>
+
+<script>
+  /// store the wrapper HTMLElement into a constant
+  const imageWrapper = document.querySelector('.ImageWrapper');
+  const animatedImage = imageWrapper.querySelector('.AnimatedImage');
+  /// then get the width and height properties
+  const {offsetWidth, offsetHeight} = imageWrapper;
+  /// create a timeout handler for requestAnimationFrame
+  let rafTimeout = null, callTimeout = null;
+  const CalculateOrigin = ( event: MouseEvent ) => {
+    /// get local cursor offset
+    const {offsetX, offsetY} = event;
+    /// we know than transform-origin centered is equal to 50% 50%
+    /// so we need to handle this position with the delta between
+    /// mouse position and wrapper bounds
+
+    /// calculate deltas
+    const deltaX = ( 100 / offsetWidth ) * offsetX;
+    const deltaY = ( 100 / offsetHeight ) * offsetY;
+    /// apply the style property to the image
+    animatedImage.style.transformOrigin = `${Math.min(100, deltaX)}% ${Math.min(100, deltaY)}%`;
+  }
+
+  /// add an event listener
+  imageWrapper.addEventListener('mousemove', (event) => {
+    if (rafTimeout) {
+      window.cancelAnimationFrame(rafTimeout);
+    }
+    /// use requestAnimationFrame for event debouncing and animation frame improvements
+    rafTimeout = window.requestAnimationFrame(() => CalculateOrigin(event));
+  });
+</script>
+
+  </body>
+</html>

@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./newstyle_mobile.css" />
   <script src="./jquery-3.6.0.min.js"></script>
-  <title></title>
+  <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<title></title>
 </head>
 
   <body>
@@ -355,9 +356,12 @@
             <div id="gotoP3">Lil Rhymer</div><br>
           <h5>Digital Storytelling</h5>
             <div id="gotoP4">La leggenda di Colapesce</div>
-            <div id="gotoP5">AudioScape</div>
+
             <div id="gotoP6">Dark Dreams</div>
             <div id="gotoP7">Under the Surface</div><br>
+              <h5>Difital Art</h5>
+            <div id="gotoP5">AudioScape</div>
+            <div id="gotoP8">Virtual Mosaics</div><br>
             <!--  <h5>Graphic Design</h5>
               <div id="gotoP7">Le loro strade</div>
               <div id="gotoP8">Erotype</div>-->
@@ -627,6 +631,54 @@
                           </div>
                       </div>
 
+                      <div id="P8"class=" flexBasis"  style="gap:20px">
+                          <h4>Virtual Mosaics</h4>
+                          <p class="centered">I produce digital artworks that resembles Mosaics! Using series of images as tiles i can recreate almost every picture </p>
+
+                          <div class="flexBasis">
+                            <div id="virtualM" style="width:90vw;height:90vw;overflow:scroll">
+
+                                <img src="./imgs/F1.png" style="width:90vw;height:90vw; object-fit:contain; transform-origin: top left;transform: translate(0%,0%) scale(1)" ></img>
+                            </div>
+                            <div style="position: absolute;transform: translate(35vw, 65vw); gap:5px" class="flexBasis">
+                                <button id="zoomIn" type="button" name="button" style="min-width:0vw">+</button>
+                                <button id="zoomOut" type="button" name="button" style="min-width:0vw">-</button>
+                            </div>
+                            <p style="text-align:center">use the buttons to Zoom</p>
+
+
+                          </div>
+
+                            <h5 style="width:100%;text-align: center">About the Project</h5>
+                            <p >
+                              I enjoy the idea of sinesthesia and creating connection between senses. That's what lies behind AudioScape. <br><br> A series of sketches that turns the input from your microphone (captured using p5.sound.js) to turn it into visual arts. The sketches are rsponsive and every frame is generated based on your voice. We can use this system to explore a new world of interactive visual arts, working to create the right visual effect for every music
+                              </p>
+
+                            <div class="flexBasis">
+                              <div class ="projectGallery" style="width:80vw">
+                                <div class="flexBasis">
+                                  <img class="collage"style="max-height: 50vh;border-radius:0px"  src="./imgs/F3.png" alt=""></img>
+                                </div>
+
+                                <div>
+                                  <img class="collage" style="max-height: 50vh;border-radius:0px"  src="./imgs/F6.png" alt=""></img>
+                                </div>
+
+                              <div class="flexBasis">
+                                  <img class="collage"  style="max-height: 50vh;border-radius:0px"   src="./imgs/F5.png" alt=""></img>
+                                </div>
+                              <div class="flexBasis">
+                                  <img class="collage"  style="max-height: 50vh; border-radius:0px"  src="./imgs/F4.png" alt=""></img>
+
+                                </div>
+
+                            </div>
+                            <p style="text-align:center">Some of the images i created for the "Faces" series</p>
+                        </div>
+                      </div>
+
+
+
 
       <!--<div class=" flexBasis">
         <h4>Le Loro Strade</h4>
@@ -654,7 +706,28 @@
   <script>
 
 
+  const imageWrapper = document.querySelector('#virtualM');
+  const animatedImage = imageWrapper.children[0];
+  let scaleFactor = 1
 
+
+
+  $("#zoomIn").on("click", function(){
+    console.log("button clicked")
+    animatedImage.style.transform =`scale(${scaleFactor*1.5})`
+    scaleFactor = scaleFactor*1.5
+    console.log(scaleFactor)
+  })
+
+  $("#zoomOut").on("click", function(){
+    console.log("button clicked")
+    if(scaleFactor>0.5){
+
+      animatedImage.style.transform =`scale(${scaleFactor/1.5})`
+      scaleFactor = scaleFactor/1.5
+      console.log(scaleFactor)
+
+    }  })
 
 
   $(".animated2").each( function(i, item){
@@ -663,7 +736,7 @@
     var text = container.data('text').replace(/\n/g, "<br>"); // Corrected line
     var n= 1
 
-    console.log(text)
+    //console.log(text)
 
     setInterval(function(){
 
@@ -674,7 +747,7 @@
               container.html("I'm here for:<br><br>"+text.slice(0, n))
           },150)
           n++
-          console.log(n)
+      //    console.log(n)
         } else{
 
           setTimeout(function(){
@@ -697,7 +770,7 @@ $(".animated3").each( function(i, item){
   var text = container.data('text').replace(/\n/g, "<br>"); // Corrected line
   var n= 1
 
-  console.log(text)
+//  console.log(text)
 
   setInterval(function(){
 
@@ -707,7 +780,7 @@ $(".animated3").each( function(i, item){
             container.html("I'm here for:<br>"+text.slice(0, n))
         },150)
         n++
-        console.log(n)
+  //      console.log(n)
       } else{
 
         setTimeout(function(){
@@ -792,6 +865,12 @@ $(".animated3").each( function(i, item){
     window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
   })
 
+  $("#gotoP8").on("click", function(){
+    var element = document.getElementById("P8")
+    var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: elementPosition,  behavior: 'smooth' });
+  })
+
   $("#gotoA1").on("click", function(){
     var element = document.getElementById("A1")
     var elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -851,6 +930,8 @@ $(".animated3").each( function(i, item){
           }
   )
 
+
+
   function isMobileDevice() {
     return !/Mobi|Android/i.test(navigator.userAgent);
     }
@@ -858,6 +939,13 @@ $(".animated3").each( function(i, item){
       console.log("we are on mobile")
       window.location.href = "./index.html";
   }
+
+
+
+
+function map(value, in_min, in_max, out_min, out_max) {
+            return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+        }
 
 
   </script>

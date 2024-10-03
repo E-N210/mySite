@@ -520,6 +520,8 @@ h5{
                             text-align: center; padding-top: 20px;line-height: 1.75em
                           }
 
+                          
+
             @media (max-width: 900px) {
                         #maintitle {
                             left: 500px; /* Adjusted position */
@@ -673,6 +675,7 @@ h5{
 
                   .projectGallery2 img{ max-width: 40vw; border-radius: 0px}
                   .projectGallery img{ max-width: 65vw; border-radius: 30px}
+
 
                   #lichenVideo{width:80vw; height:55vh; border-radius: 30px}
 
