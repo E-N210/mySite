@@ -116,7 +116,7 @@ button{
   font-size: 15px;
   font-weight: bold;
   border: solid 2px;
-  border.color: rgb(235,235,235);
+  border-color: rgb(235,235,235);
   mix-blend-mode: unset;
 }
 
@@ -148,9 +148,17 @@ border-color: rgb(235,235,235)
   overflow: hidden;
   animation: animated-text 10s steps(29,end) 1s infinite normal both}
 
-  .animated{white-space: pre-wrap; background-blend-mode: overlay;
-  color:rgb(235,235,235);background-color: rgb(30,45,54); font-size:1.5em;
-  margin-top: 50px;    width: fit-content;}
+  .animated{white-space: pre-wrap; 
+    background-blend-mode: overlay;
+    color: rgb(30,45,54); 
+    font-size:1em;
+    min-height: 200px;
+    width:45%;
+    line-height: 1.5em;
+    text-align: center;
+    font-family: monospace;
+    margin-top: 30px;    
+   }
 
 
   .animated2{white-space:
@@ -250,6 +258,20 @@ h5{
       border-radius: 10%
     }
 
+
+    .iconbig{width: 20vw;
+      object-fit: contain;
+      height:80px;
+      max-width: 50vw;
+      margin-top:60px;
+      margin-bottom:15px;
+      border-radius: 10%
+    }
+
+    .exp{
+      max-width: 50vw;
+    }
+
     .image_list{position:relative;
       display: flex;
       flex-direction: row;
@@ -257,12 +279,24 @@ h5{
       flex-wrap: wrap;
     }
 
+    .image_list2{position:relative;
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      max-width: 90vw;
+      
+      justify-content: flex-start;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      gap:50px
+    }
+
 
     .columnList{
         font-weight: bold;
         line-height: 150%;
         position: relative;
-        column-count: 1;
+        column-count: 2;
         column-gap: 25px;
         left:5%;
         width:95%;
@@ -272,16 +306,14 @@ h5{
           padding-top:100px;
         position:relative;
         color:rgb(34, 40, 54);
-        width:80%;
-        margin-bottom: 100px;
-        left:5%;}
+        width:60%;
+        left:15%;}
 
         .theorical_skill_right{
           padding-top:100px;
         position:relative;  color:rgb(40, 40, 40);
-        width:60%;
-        margin-bottom: 100px;
-        left:40%;}
+        width:50%;
+        left:35%;}
 
           .menuItem{padding-bottom: 100px; margin-top: 1%;}
           .menuItem.flex{display: flex; flex-direction: column;align-items:center;}
@@ -441,23 +473,22 @@ h5{
                         .projectGallery3{
                           grid-gap:20px;
                           overflow-x: scroll;
-                          width: 80vw;
+                          width: 50vw;
                           display: flex; flex-direction: row;
                           justify-items:center;align-items: flex-end;
 
                         }
-                        .projectGallery3 img{ max-width: 40vw; border-radius: 10px}
+                        .projectGallery3 img{ max-width: 50vw; border-radius: 10px}
 
                         .projectGallery4{
                           grid-gap:20px;
                           overflow-x: scroll;
-                          width: 100%;
+                          width: 50vw;
                           display: flex; flex-direction: row;
                           justify-items:center;
-                          justify-content: center;
 
                         }
-                        .projectGallery4 img{ max-width: 26vw; border-radius: 10px}
+                        .projectGallery4 img{ max-width: 24vw; border-radius: 10px}
 
                         .IGContainer{display: grid;
                           grid-gap:10px;
@@ -471,21 +502,21 @@ h5{
             .video_container1{display: flex; padding-left: 0vw;padding-right: 0vw;
               width:100vw; grid-gap: 0px; justify-content: space-between}
 
-              .video_container1.bis{display: flex; padding-left: 0vw;padding-right: 0vw;
-                width:100vw; grid-gap: 0px; justify-content: space-between}
+              .video_container1.bis{display: flex; flex-direction: column; padding-left: 0vw;padding-right: 0vw;
+                width:100vw; grid-gap: 50px; justify-content: space-between;    align-items: center;}
 
 
 
-            .video_container1 video{width:60vw; max-width: 70vw; height: 65vh; object-fit:contain;}
+            .video_container1 video{width:60vw; max-width: 70vw; height: 65vh; object-fit:contain; border-radius: 10px;}
 
-                        .video_container1.bis video{width:33vw; max-width: 70vw; height: 40vh; object-fit:cover;}
+                        .video_container1.bis video{width:33vw; max-width: 50vw; height: 45vh; object-fit:cover;}
 
                         #videoAS1{
-                          width:50%
+                          width:100%
                         }
 
-                        #videoAS2{width:25%}
-                        #videoAS4{width:25%}
+                        #videoAS2{width:100%}
+                        #videoAS4{width:100%}
 
             #whaleVideo{
               object-fit:cover;
