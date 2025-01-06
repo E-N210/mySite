@@ -281,7 +281,8 @@ h5{
 
     .image_list2{position:relative;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      align-items: center;
       overflow-x: scroll;
       max-width: 90vw;
       
