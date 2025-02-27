@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="p5.min.js"></script>
+      <script src="addons/p5.dom.min.js"></script>
+        <script src="./multiimage.js"></script> 
+        <style media="screen">
+          canvas{
+            overflow-x: scroll;
+            overflow-y: scroll;
+
+          }
+
+          body{
+            margin: 0;
+          }
+
+          #overlay{
+            position: absolute;top: 0; left: 0;
+            width: 100vw;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+
+
+          }
+
+          #divContainer{
+            display: flex;
+            align-items: center;
+            color:white;
+            font-family: sans-serif;
+            gap: 30px
+          }
+
+          .mainButton{
+            font-family: sans-serif;
+            color: white;
+            display: flex;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+            gap:5px;
+            background-color: blueviolet;
+            width: max-content;
+            border: 2px solid white;
+            border-radius: 50px;
+            min-height: 5vw;
+            min-width: 20vw;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+
+          }
+
+          .button{
+            color: white;
+            display: flex;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+            gap:5px;
+            background-color: blueviolet;
+            width: max-content;
+            border: 2px solid white;
+            border-radius: 50px;
+            min-height: 2.5vw;
+            min-width: 10vw;
+            justify-content: center;
+            font-size: 1.5rem;
+
+          }
+
+          .mainButton img{
+            min-width: 3.5vw;
+            min-height: 3.5vh;
+          }
+
+          h4{
+            margin: 0;
+          }
+
+          #downloadDialogue{
+            display: none;
+          }
+
+        </style>
+  </head>
+  <body>
+
+    <div id="overlay">
+      <h1 id="downloadDialogue">DOWNOLOAD DIALOGUE</h1>
+      <canvas id="outputCanvas"></canvas>
+      <!--<div id="loading"><h1>We are generating your image</h1> a download window will popup once the process is done, please do not close this window </div>-->
+     
+      <div id="scatta" class="mainButton" > <h4>Shot</h4> <img src="camera.svg" alt=""> <div id="creditsIndicator"></div></div>
+        
+      <div id="divContainer">
+        <input type="file" id="imageUpload" style="display: none;">
+
+        <div id="upload" class="button"> <h4>Upload</h4><img src="upload.svg" alt=""></div>
+        <div id="high_Res" class="button" > <h4>High Res</h4><img src="checkBox_empty.svg" id="highResCheckBox" alt=""> </div>
+        <div id="restart" class="button" type="div"> <h4>Restart</h4></div>
+        
+
+      </div>
+      
+    </div>
+
+
+    <script>
+
+      var save =0
+
+      let creditsIndicator= document.getElementById("creditsIndicator")
+
+
+      let downloadDialogue =document.getElementById("downloadDialogue")
+      let startdiv= document.getElementById("scatta")
+      let uploaddiv= document.getElementById("upload")
+      let highResCheckBox = document.getElementById('highResCheckBox');
+      let restart = document.getElementById('restart');
+      
+      startdiv.addEventListener("click", function(){
+
+          start=1
+          keepCamera=1
+
+          //save("defaultCanvas0")
+     
+      })
+
+      restart.addEventListener("click", function(){
+        keepCamera=0
+      })
+
+
+      var highRes = 0
+      highResCheckBox.addEventListener('click', function (){
+
+        if(highRes==0){
+          highRes=1
+          highResCheckBox.src ="checkBox_fill.svg"
+        }
+        else{
+          highRes=0
+          highResCheckBox.src ="checkBox_empty.svg"
+        }
+});
+
+    </script>
+  </body>
+</html>

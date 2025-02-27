@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Random Person Image</h1>
+    <img id="randomImage" src="https://thispersondoesnotexist.com" alt="Random Person">
+    <br>
+    <button onclick="fetchRandomPerson()">Get New Person</button>
+
+    <script type="text/javascript">
+
+      function fetchRandomPerson() {
+          const image = document.getElementById('randomImage');
+          // Adding a timestamp to prevent caching
+          image.src = 'https://thispersondoesnotexist.com';
+      }
+
+    </script>
+
+  </body>
+</html>
